@@ -22,7 +22,7 @@ function Login() {
     try {
       setLoading(true); // เริ่มโหลด
       await login(email, password);
-      navigate("/admin");
+      navigate("/topp7/admin");
     } catch (err) {
       setError("เข้าสู่ระบบไม่สำเร็จ: " + err.message);
     } finally {

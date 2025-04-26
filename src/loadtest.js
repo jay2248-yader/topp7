@@ -1,19 +1,20 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { check, sleep } from 'k6';
 
-export let options = {
+export const options = {
   stages: [
-    { duration: '30s', target: 5 },    // เริ่มที่ 5 คน
-    { duration: '30s', target: 10 },   // เพิ่มเป็น 10 คน
-    { duration: '30s', target: 20 },   // เพิ่มเป็น 20 คน
-    { duration: '30s', target: 50 },   // เพิ่มเป็น 50 คน
-    { duration: '30s', target: 100 },  // เพิ่มเป็น 100 คน
-    { duration: '30s', target: 150 },  // เพิ่มเป็น 150 คน
-    { duration: '30s', target: 200 },  // เพิ่มเป็น 200 คน
+    { duration: '1m', target: 100 }, // 1 นาที ขึ้นไป 100 users
+    { duration: '1m', target: 200 }, // 1 นาที ขึ้นไป 200 users
+    { duration: '1m', target: 300 }, // 1 นาที ขึ้นไป 300 users
+    { duration: '1m', target: 400 }, // 1 นาที ขึ้นไป 400 users
+    { duration: '30s', target: 0 },  // Cool down
   ],
 };
 
 export default function () {
-  http.get('https://your-website.com/'); // เปลี่ยน URL ตรงนี้เป็นเว็บของคุณ
+  const res = http.get('https://jay2248-yader.github.io/topp6/');
+  check(res, {
+    'status is 200': (r) => r.status === 200,
+  });
   sleep(1);
 }
