@@ -4,7 +4,7 @@ import { collection, query, where, onSnapshot, doc } from "firebase/firestore";
 import { db } from "../firebase";
 import "./Topiclist.css";
 
-function TopicList() {
+function TopicL() {
   const [topics, setTopics] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -136,4 +136,4 @@ function TopicList() {
   );
 }
 
-export default TopicList;
+export default TopicL;

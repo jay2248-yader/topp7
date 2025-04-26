@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TopicList from "./components/TopicList";
+import TopicL from "./components/TopicL";
 import MemberInput from "./components/MemberInput";
 import Login from "./components/Login";
 import AddTopic from "./components/AddTopic";
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/topp5" element={<TopicList />} /> {/* หน้า TopicList */}
+        <Route path="/topp6" element={<TopicL />} /> {/* หน้า TopicList */}
         <Route path="/topics/:topicId" element={<MemberInput />} /> {/* หน้า MemberInput ที่รับ topicId */}
         <Route path="/add-topic" element={<AddTopic />} />
       </Routes>
