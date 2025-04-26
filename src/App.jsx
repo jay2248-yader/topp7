@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/topp3" element={<TopicList />} /> {/* หน้า TopicList */}
+        <Route path="/topp5" element={<TopicList />} /> {/* หน้า TopicList */}
         <Route path="/topics/:topicId" element={<MemberInput />} /> {/* หน้า MemberInput ที่รับ topicId */}
         <Route path="/add-topic" element={<AddTopic />} />
       </Routes>
