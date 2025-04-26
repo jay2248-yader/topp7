@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { collection, query, where, onSnapshot, doc } from "firebase/firestore";
 import { db } from "../firebase";
-import "./Topiclist.css";
+import "./TopicL.css";
 
 function TopicL() {
   const [topics, setTopics] = useState([]);
